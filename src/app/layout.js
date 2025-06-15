@@ -1,3 +1,4 @@
+import Footer from "./_components/footer";
 import NavBar from "./_components/navigationBar";
 
 export default function DashboardLayout({ children }) {
@@ -8,6 +9,7 @@ export default function DashboardLayout({ children }) {
         {/* Layout UI */}
         {/* Place children where you want to render a page or nested layout */}
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   )
