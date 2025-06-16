@@ -1,27 +1,39 @@
-// components/NavBar.jsx
-import Link from 'next/link';
+'use client';
+
+import { Menu, X } from 'lucide-react';
+import { useState } from 'react';
+import styles from './navigationBar.module.css';
 
 export default function NavBar() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <nav style={styles.nav}>
-      <Link href="/" style={styles.link}>Home</Link>
-      <Link href="/about" style={styles.link}>About</Link>
-      <Link href="/contact" style={styles.link}>Contact</Link>
-    </nav>
+    <>
+      <nav className={styles.nav}>
+        <h2 className={styles.logo}>momentum</h2>
+
+        <div className={styles['desktop-menu']}>
+          <a href="https://github.com/Guerra-09/momentum" target="_blank" className={styles.link}>Github</a>
+          <a href="/about-us" className={`${styles.link} ${styles['link-button']}`}>About us</a>
+        </div>
+
+        <button onClick={() => setOpen(true)} className={`${styles.iconBtn} ${styles['mobile-only']}`}>
+          <Menu color="black" size={28} />
+        </button>
+      </nav>
+
+      {open && (
+        <div className={styles.sidebar}>
+          <div className={styles.sidebarHeader}>
+            <h2 className={styles.logo}>momentum</h2>
+            <button onClick={() => setOpen(false)} className={styles.iconBtn}>
+              <X color="black" size={28} />
+            </button>
+          </div>
+          <a href="/about-us" className={styles.link}>About us</a>
+          <a href="https://github.com/Guerra-09/momentum" target="_blank" className={styles.link}>Github</a>
+        </div>
+      )}
+    </>
   );
 }
-
-const styles = {
-  nav: {
-    display: 'flex',
-    gap: '1rem',
-    padding: '1rem',
-    background: '#f5f5f5',
-    borderBottom: '1px solid #ddd',
-  },
-  link: {
-    textDecoration: 'none',
-    color: '#333',
-    fontWeight: 'bold',
-  },
-};
