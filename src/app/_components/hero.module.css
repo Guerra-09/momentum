@@ -10,56 +10,6 @@
         color: #fff;
     }
     
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        padding: 1.5rem 2rem;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    
-    .logo {
-        font-family: 'Seaweed Script';
-        font-size: 32px;
-        margin: 0;
-        padding-left: 1rem;
-    }
-    
-    .nav {
-        display: flex;
-        gap: 1rem;
-    }
-    
-    .link {
-        text-decoration: none;
-        color: #ffffff;
-        font-weight: bold;
-        padding: 0.4rem 1rem;
-        border-radius: 8px;
-        transition: 0.3s ease;
-    }
-
-    .link:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-        color: #ffffff;
-    }
-    
-    .button {
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 0.4rem 1rem;
-        border-radius: 8px;
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .button:hover {
-        background-color: rgba(0, 0, 0, 0.7);
-        color: #ffffff;
-    }
     
     .textContainer {
         position: absolute;

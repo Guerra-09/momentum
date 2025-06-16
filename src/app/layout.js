@@ -10,7 +10,6 @@ export default function DashboardLayout({ children }) {
     <html lang="en">
       <body>
         <Hero />
-        <NavBar />
         <main>{children}</main>
         <Footer />
       </body>
