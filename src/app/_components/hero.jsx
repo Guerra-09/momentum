@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { FiSearch } from 'react-icons/fi';
 import styles from './hero.module.css';
+import { Search } from 'lucide-react';
 
 export default function Hero() { 
   return (
@@ -24,7 +24,7 @@ export default function Hero() {
             placeholder="Search for free photos"
             className={styles.searchInput}
           />
-          <FiSearch className={styles.searchIcon} />
+          <Search className={styles.searchIcon} />
         </div>
       </div>
     </div>
