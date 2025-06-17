@@ -1,4 +1,4 @@
-.desktop-menu {
+.desktopMenu {
   display: flex;
   align-items: center;
 }
@@ -8,11 +8,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0.2rem 2rem;
   position: fixed;
-  top: 0;
-  left: 0;
-  padding: 1 rem 2rem; 
+  padding: 1rem 2rem; 
   background: transparent;
   z-index: 1000;
   transition: background 0.3s ease;
@@ -92,7 +89,6 @@
   background: none;
   border: none;
   cursor: pointer;
-  color:#ffffff;
 }
 
 .mobile-only {
@@ -107,7 +103,7 @@
   right: 0;
   width: 100%;
   height: 100vh;
-  background: #00000093;
+  background: #fdfcfc;
   padding: 1rem;
   z-index: 1000;
 }
@@ -120,8 +116,19 @@
 }
 
 @media (max-width: 600px) {
-  .desktop-menu {
+  .desktopMenu {
     display: none;
+  }
+
+  .sidebarLogo, .sidebarLink {
+    font-size: 24px;
+    color:#000000;
+    padding: 1rem 0;
+  }
+
+  .sidebarLogo {
+    font-family: 'Seaweed Script';
+    margin-bottom: 1rem;
   }
 
   .mobile-only {
