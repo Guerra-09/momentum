@@ -89,6 +89,14 @@
   background: none;
   border: none;
   cursor: pointer;
+  color: white;
+}
+
+.scrolledIconBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000000;
 }
 
 .mobile-only {

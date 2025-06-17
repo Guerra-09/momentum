@@ -31,7 +31,7 @@ export default function NavBar() {
       </div>
 
         <button onClick={() => setOpen(true)} className={`${styles.iconBtn} ${styles['mobile-only']}`}>
-          <Menu color="white" size={28} />
+           <Menu className={scrolled ? styles.scrolledIconBtn : ''} size={28} />
         </button>
       </nav>
 
@@ -39,7 +39,7 @@ export default function NavBar() {
         <div className={styles.sidebar}>
           <div className={styles.sidebarHeader}>
             <h2 className={styles.sidebarLogo}>momentum</h2>
-            <button onClick={() => setOpen(false)} className={styles.iconBtn}>
+            <button onClick={() => setOpen(false)} className={`${styles.iconBtn} ${styles['mobile-only']}`}>
               <X color="black" size={28} />
             </button>
           </div>
