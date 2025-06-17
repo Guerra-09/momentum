@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './hero.module.css' 
 import { Search } from 'lucide-react';
-import NavBar from './navigationBar';
+import NavBar from '../navigationBar/navigationBar';
 
 export default function Hero() { 
   return (

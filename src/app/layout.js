@@ -1,7 +1,7 @@
 import "./globals.css";
-import Footer from "./_components/footer";
-import Hero from "./_components/hero";
-import NavBar from "./_components/navigationBar";
+import Footer from "./_components/footer/footer";
+import Hero from "./_components/hero/hero";
+import NavBar from "./_components/navigationBar/navigationBar";
 import './globals.css';
 
 
