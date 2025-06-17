@@ -1,10 +1,12 @@
 import Link from 'next/link'
+import Pictures from './_components/pictures'
+import IMAGES_MOCK from '../../mocks/images.mock'
 
 export default function Page() {
+
   return (
   <>
-    <h1>Hello Next.js!</h1>
-    <Link href={`/about-us`}>About us</Link>
+    <Pictures pictures={IMAGES_MOCK.IMAGES_MOCK} />
   </> 
   )
 }
