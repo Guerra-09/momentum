@@ -19,12 +19,10 @@ export default {
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQortRsPtYN-i83333bfq1dmTouHIbPxrwyzQ&s",
     "https://wallpapercave.com/wp/wp1986546.jpg",
     "https://images.steamusercontent.com/ugc/787478092102364309/8E7BCCE0511B73D8CD679DC16B970A777022C9B1/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
-    "https://static.wikia.nocookie.net/wakfu/images/9/98/LsDtMER.png/revision/latest?cb=20200527165143",
     "https://tvline.com/wp-content/uploads/2020/01/one-piece-live-action.jpg?w=600&h=400&crop=1",
     "https://m.media-amazon.com/images/M/MV5BYzZjNGE2NDctZjc5Mi00ZGRiLTg0NzItNmVlODBjYWM1ZWVhXkEyXkFqcGc@._V1_QL75_UX500_CR0,0,500,281_.jpg",
     "https://preview.redd.it/q3qqwg0ucen21.jpg?width=1920&format=pjpg&auto=webp&s=27c892a7ae3423da44135b2807b96f167a7b3b37",
     "https://i.pinimg.com/originals/45/ba/f9/45baf9eb565e939d2fd4e31bfd845d13.gif",
-    "https://i.pinimg.com/736x/a8/ab/d0/a8abd0f23d7ec136121b192b2307bf39.jpg",
     "https://media.tenor.com/H4IRhFj2vToAAAAM/bon-clay-one-piece.gif"
   ]
 }

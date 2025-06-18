@@ -1,11 +1,50 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './pictures.module.css';
 
-export default function Pictures({ pictures }) {
+const API_URL = 'https://api.pexels.com/v1/curated?per_page=20';
+const ENV = process.env.NEXT_PUBLIC_ENV;
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+
+export default function Pictures() {
+  const [pictures, setPictures] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [selectedImg, setSelectedImg] = useState(null);
 
+  useEffect(() => {
+    async function fetchPhotos() {
+      setLoading(true);
+      setError(null);
+      try {
+        if (ENV === 'development') {
+          // Usar mocks en desarrollo
+          const mock = await import('../../../../mocks/images.mock');
+          setPictures(mock.default.IMAGES_MOCK);
+        } else {
+          // Usar API en producción
+          const res = await fetch(API_URL, {
+            headers: {
+              Authorization: API_KEY,
+            },
+          });
+          if (!res.ok) throw new Error('Error al obtener fotos');
+          const data = await res.json();
+          setPictures(data.photos.map(photo => photo.src.large));
+        }
+      } catch (err) {
+        setError('No se pudieron cargar las fotos.');
+        console.error('Error fetching photos:', err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchPhotos();
+  }, []);
+
+  if (loading) return <div style={{textAlign: 'center', padding: '2rem'}}>Cargando fotos...</div>;
+  if (error) return <div style={{color: 'red', textAlign: 'center', padding: '2rem'}}>{error}</div>;
   if (!Array.isArray(pictures)) return null;
   return (
     <>
