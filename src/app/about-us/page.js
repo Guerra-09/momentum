@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import Hero from '../_components/hero'
+import Hero from '../_components/hero/hero'
 
 export default function AboutUs() {
   return (
   <>
-    <Hero 
+    <Hero
       backgroundImage="/background2.webp"
       mainText="About us"
       subText="Know us better."
