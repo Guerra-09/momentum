@@ -1,0 +1,85 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 16px;
+  padding: 1rem;
+}
+
+.aboutUs {
+  padding: 1rem;
+  grid-column: 1;
+}
+
+.thisProject {
+  padding: 1rem;
+  grid-column: 1 / span 2;
+}
+
+.aboutUsText h2, .thisProject h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.aboutUsText p, .thisProjectText p {
+  font-size: 1.2rem;
+}
+
+.aboutImageContainer {
+  width: 70%;
+  margin: 1rem auto;
+  grid-column: 2;
+}
+.aboutImage {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  transition: 0.3s ease-in-out;
+}
+
+.aboutImage:hover {
+  transform: scale(1.05);
+}
+
+.backLinkContainer {
+  padding: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.backLink {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-weight: bold; 
+  transition: 0.2s ease-in-out; 
+}
+
+.backLink:hover {
+  background-color: #000000;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .gridContainer {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+  
+  .aboutUs, .thisProject,.aboutImageContainer {
+    grid-column: auto; 
+    width: 100%;
+  }
+  
+  .aboutImageContainer {
+    margin: 1rem 0; 
+    order: 1; 
+  }
+  
+  .thisProject {
+    order: 2; 
+  }
+}
