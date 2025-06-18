@@ -1,17 +1,12 @@
 import Link from 'next/link'
-import Hero from './_components/hero'
+import Pictures from './_components/pictures/pictures'
+import IMAGES_MOCK from '../../mocks/images.mock'
 
 export default function Page() {
+
   return (
   <>
-    <Hero 
-      backgroundImage="/background1.webp"
-      mainText="Discover the best photos."
-      subText="Boost your creativity."
-      showSearch={true}
-    />
-    <h1>Hello Next.js!</h1>
-    <Link href={`/about-us`}>About us</Link>
+    <Pictures pictures={IMAGES_MOCK.IMAGES_MOCK} />
   </> 
   )
 }

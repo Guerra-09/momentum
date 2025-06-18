@@ -1,6 +1,6 @@
 import "./globals.css";
-import Footer from "./_components/footer";
-import NavBar from "./_components/navigationBar";
+import Footer from "./_components/footer/footer";
+import NavBar from "./_components/navigationBar/navigationBar";
 import './globals.css';
 
 
